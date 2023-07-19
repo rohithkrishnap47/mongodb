@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/home.css">
+</head>
+
+<body style="background-color: rgb(227, 138, 138); padding-top: 150px;">
+    {{{alertScript}}}
+    <h1 style="display: flex; justify-content: center; color: azure;">HOME</h1>
+    <p style="display: flex; justify-content: center; color: azure;">Update your details !!!</p>
+    <div class="container" style="display: flex; justify-content: center;"   >
+        <form action="/home" method="post" style="display: flex; justify-content: center;">
+            <input type="hidden" name="id" value="{{id}}">
+            <input type="text" name="name" value={{name}} style="padding: 10px 40px; margin: 0px 5px;">
+            <input type="password" name="password" placeholder="New Password"
+                style="padding: 10px 40px; margin: 0px 5px">
+            <button type="submit"
+                style="background-color: rgb(10, 194, 32); padding: 10px 40px; margin: 0px 5px ">Update</button>
+
+        </form>
+        <form action="/delete" method="post">
+            <input type="hidden" name="id" value="{{id}}">
+            <button type="submit"
+                style="background-color: rgb(255, 0, 0); padding: 10px 40px; margin: 0px 5px ">Delete</button>
+        </form>
+
+    </div>
+
+
+
+</body>
+
+</html>
